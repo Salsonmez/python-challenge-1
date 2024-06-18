@@ -13,7 +13,7 @@ This Python console application allows customers to order food items from a food
 
 ## How to Use
 
-1. Run the Python script `food_truck_order.py`.
+1. Run the Python script `menu.py`.
 2. Select a menu category by entering its number.
 3. Choose an item from the sub-menu or type 'done' to finish.
 4. Specify the quantity of the selected item.
