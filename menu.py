@@ -168,21 +168,19 @@ while place_order:
 
     # Ask the customer if they would like to order anything else
     while True:
-        keep_ordering = input("Would you like to keep ordering? (y)es or (n)o: ")
+        keep_ordering = input("Would you like to keep ordering? (y)es or (n)o: ").lower()
 
-        # 5. Check the customer's input
-                # Keep ordering
-                # Exit the keep ordering question loop
+        # Replace if-else logic with match-case
+        match keep_ordering:
+            case 'y' | 'yes':
+                break
+            case 'n' | 'no':
+                place_order = False
+                break
+            case _:
+                print("Please enter 'y' or 'n'.\n")
 
-        if keep_ordering in ['y', 'yes']:
-            break
-        elif keep_ordering in ['n', 'no']:
-            place_order = False
-            break
-        else:
-            # Tell the customer to try again
-            print("Please enter 'y' or 'n'.\n")
-            # Print out the customer's order
+# Print out the customer's order
 print("\nThis is what we are preparing for you.\n")
 print("Item name                 | Price  | Quantity")
 print("--------------------------|--------|----------")
